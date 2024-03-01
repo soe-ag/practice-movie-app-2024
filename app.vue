@@ -1,5 +1,6 @@
 <template>
-  <div>
-Welcome page
-</div>
+  <!-- <div>Welcome page app.vue</div> -->
+  <NuxtPage />
 </template>
+
+<script setup ></script>
