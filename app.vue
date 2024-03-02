@@ -1,6 +1,14 @@
+<script setup >
+import { NuxtLink } from '#build/components';
+</script>
+
 <template>
-  <!-- <div>Welcome page app.vue</div> -->
+<div>
+  <nav>
+    <NuxtLink to="/">Home</NuxtLink>
+    <NuxtLink to="/movies">Movies</NuxtLink>
+  </nav>
   <NuxtPage />
+  </div>
 </template>
 
-<script setup ></script>
