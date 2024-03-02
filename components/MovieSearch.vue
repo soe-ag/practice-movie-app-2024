@@ -23,7 +23,11 @@ async function handleSearch() {
     <ul v-if="movies.length" class="list-none flex flex-wrap gap-5">
       <li v-for="movie in movies" :key="movie.imdbID">
         <NuxtLink :to="{ name: 'movies-id', params: { id: movie.imdbID } }">
-          <NuxtImg :src="movie.Poster" :alt="movie.title" width="100" />
+          <NuxtImg
+            :src="movie.Poster || '/images/default-movie-poster.jpg'"
+            :alt="movie.title"
+            width="100"
+          />
         </NuxtLink>
         <p>{{ movie.Title }}</p>
       </li>
