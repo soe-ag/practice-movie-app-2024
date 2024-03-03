@@ -37,11 +37,8 @@ handleSearch();
     <ul v-if="movies.length" class="list-none flex flex-wrap gap-5">
       <li v-for="movie in movies" :key="movie.imdbID" class="w-50 b-1 b-red">
         <NuxtLink :to="{ name: 'movies-id', params: { id: movie.imdbID } }">
-          <NuxtImg
-            :src="movie.Poster || '/images/default-movie-poster.jpg'"
-            :alt="movie.title"
-            width="100"
-          />
+          <NuxtImg v-if="movie.Poster" :src="movie.Poster" class="w-25" />
+          <NuxtImg v-else src="'/images/default.jpeg'" class="w-25" />
         </NuxtLink>
         <p>{{ movie.Title }}</p>
       </li>
