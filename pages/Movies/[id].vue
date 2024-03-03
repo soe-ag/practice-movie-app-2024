@@ -25,6 +25,10 @@ if (data.value.Error === "Incorrect IMDb ID.") {
   showError({ statusCode: 404, statusMessage: "Page Not Found" });
 }
 
+useHead({
+  title: data.value.Title,
+});
+
 // const { data } = await useAsyncData(
 //   `/movies/${route.params.id}`,
 //   () => {

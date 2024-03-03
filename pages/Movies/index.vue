@@ -1,4 +1,8 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+// useHead({
+//   title: "My movie site",
+// });
+</script>
 
 <template>
   <div><MovieSearch /></div>

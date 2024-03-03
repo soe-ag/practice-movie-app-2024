@@ -1,4 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+  title: "",
+  titleTemplate: (titleChunk) => {
+    return titleChunk ? `${titleChunk} - Movie Site` : "Movie Site";
+  },
+});
+</script>
 
 <template>
   <link
@@ -6,10 +13,8 @@
     rel="stylesheet"
   />
   <div>
-    <nav class="flex gap-4 my-4">
-      <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/movies">Movies</NuxtLink>
-    </nav>
-    <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>
