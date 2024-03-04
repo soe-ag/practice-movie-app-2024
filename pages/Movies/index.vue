@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-// useHead({
-//   title: "My movie site",
+// definePageMeta({
+//   middleware: ["logger"],
 // });
 </script>
 
