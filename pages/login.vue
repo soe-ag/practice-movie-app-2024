@@ -1,12 +1,16 @@
 <script setup>
 // const isLoggedIn = useState("isLoggedIn", () => false);
-const isLoggedIn = useIsLoggedIn();
+// const isLoggedIn = useIsLoggedIn();
+
+const user = useUser();
+
 definePageMeta({
   layout: "plain",
 });
 
 function login() {
-  isLoggedIn.value = true;
+  // isLoggedIn.value = true;
+  user.isLoggedIn = true;
   useRouter().push("/");
 }
 </script>

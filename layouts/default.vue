@@ -1,6 +1,7 @@
 <script setup>
 // const isLoggedIn = useState("isLoggedIn", () => false);
-const isLoggedIn = useIsLoggedIn();
+// const isLoggedIn = useIsLoggedIn();
+const user = useUser();
 
 const items = ref([
   {
@@ -23,8 +24,8 @@ const items = ref([
     <NuxtLink to="/movies">Movies</NuxtLink>
   </nav> -->
 
-  <NuxtLink v-if="!isLoggedIn" to="/login">Login</NuxtLink>
-  <a href="#" v-else @click.prevent="isLoggedIn = false">Logout</a>
+  <NuxtLink v-if="!user.isLoggedIn" to="/login">Login</NuxtLink>
+  <a href="#" v-else @click.prevent="user.isLoggedIn = false">Logout</a>
 
   <TabMenu :model="items">
     <template #item="{ item }">
