@@ -3,7 +3,7 @@ const route = useRoute();
 
 // using useFetch is same as using useAsyncData + $fetch
 // const { data } = await useFetch(
-//   `http://www.omdbapi.com/?apikey=fbd9f84b&y=2024`,
+//   `https://www.omdbapi.com/?apikey=fbd9f84b&y=2024`,
 //   {
 //     key: `/movies/${route.params.id}`,
 //   }

@@ -3,7 +3,7 @@ const route = useRoute();
 
 // using useFetch is same as using useAsyncData + $fetch
 const { data } = await useFetch(
-  `http://www.omdbapi.com/?apikey=fbd9f84b&i=${route.params.id}`,
+  `https://www.omdbapi.com/?apikey=fbd9f84b&i=${route.params.id}`,
   {
     pick: [
       "Title",
@@ -33,7 +33,7 @@ useHead({
 //   `/movies/${route.params.id}`,
 //   () => {
 //     return $fetch(
-//       `http://www.omdbapi.com/?apikey=fbd9f84b&i=${route.params.id}`
+//       `https://www.omdbapi.com/?apikey=fbd9f84b&i=${route.params.id}`
 //     );
 //   },
 //   // { transform(data) {} }

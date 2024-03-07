@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-// http://www.omdbapi.com/?i=tt3896198&apikey=fbd9f84b
+// https://www.omdbapi.com/?i=tt3896198&apikey=fbd9f84b
 
 // useHead({
 //   title: "My movie site",
