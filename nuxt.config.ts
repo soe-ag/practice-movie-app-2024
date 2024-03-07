@@ -1,3 +1,5 @@
+// import { defineNuxtConfig } from "nuxt/config";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -16,4 +18,10 @@ export default defineNuxtConfig({
   },
 
   css: ["primevue/resources/themes/aura-dark-purple/theme.css"],
+
+  routeRules: {
+    "/spa": { ssr: false },
+    "/static": { static: true },
+    "/swr": { swr: true },
+  },
 });
