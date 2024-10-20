@@ -13,6 +13,7 @@ export default defineNuxtConfig({
       include: "*",
     },
   },
+
   pinia: {
     storesDirs: ["./stores/**"],
   },
@@ -24,4 +25,6 @@ export default defineNuxtConfig({
     "/static": { static: true },
     "/swr": { swr: true },
   },
+
+  compatibilityDate: "2024-10-20",
 });
